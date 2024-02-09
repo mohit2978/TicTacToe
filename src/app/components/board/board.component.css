@@ -1,0 +1,10 @@
+.board-heading{
+    text-align: center;
+    text-transform: uppercase;
+}
+table{
+    margin: auto;
+}
+table tr td{
+    border: 1px solid black;
+}
