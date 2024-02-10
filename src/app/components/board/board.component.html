@@ -1,5 +1,6 @@
 <div class="board-container">
     <h1 class="board-heading">Tic Tac Toe Game</h1>
+    <h2 class="board-heading" *ngIf="!gameService.gameOver">Player {{gameService.chance}}'s turn</h2>
     <table>
         <tr>
             <td (click)="gameService.changeGameState(0)">

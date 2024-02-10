@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { GameService } from '../../service/game.service';
 
 @Component({
   selector: 'app-position-text',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './position-text.component.css'
 })
 export class PositionTextComponent {
-  @Input() val=3;
+  @Input() val=2;
 }
