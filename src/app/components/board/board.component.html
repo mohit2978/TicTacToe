@@ -2,22 +2,31 @@
     <h1 class="board-heading">Tic Tac Toe Game</h1>
     <table>
         <tr>
-            <td><app-position-text [val]="5"></app-position-text></td>
-            <td><app-position-text></app-position-text></td>
-            <td><app-position-text></app-position-text></td>
+            <td (click)="gameService.changeGameState(0)">
+                <app-position-text [textContent]="gameService.gameState[0]"></app-position-text></td>
+            <td (click)="gameService.changeGameState(1)">
+                <app-position-text [textContent]="gameService.gameState[1]" ></app-position-text></td>
+            <td (click)="gameService.changeGameState(2)">
+                <app-position-text [textContent]="gameService.gameState[2]"></app-position-text></td>
         </tr>
         <tr>
-            <td><app-position-text></app-position-text></td>
-            <td><app-position-text></app-position-text></td>
-            <td><app-position-text></app-position-text></td>
+            <td (click)="gameService.changeGameState(3)">
+                <app-position-text [textContent]="gameService.gameState[3]"></app-position-text></td>
+            <td (click)="gameService.changeGameState(4)">
+                <app-position-text [textContent]="gameService.gameState[4]"></app-position-text></td>
+            <td (click)="gameService.changeGameState(5)">
+                <app-position-text [textContent]="gameService.gameState[5]"></app-position-text></td>
         </tr>
         <tr>
-            <td><app-position-text></app-position-text></td>
-            <td><app-position-text></app-position-text></td>
-            <td><app-position-text></app-position-text></td>
+            <td (click)="gameService.changeGameState(6)">
+                <app-position-text [textContent]="gameService.gameState[6]"></app-position-text ></td>
+            <td (click)="gameService.changeGameState(7)">
+                <app-position-text [textContent]="gameService.gameState[7]"></app-position-text></td>
+            <td (click)="gameService.changeGameState(8)">
+                <app-position-text [textContent]="gameService.gameState[8]"></app-position-text></td>
         </tr>
     </table>
     <div class="button-container">
-        <button>Restart Game</button>
+        <button [disabled]="!gameService.gameOver" (click)="gameService.restartGame()">Restart Game</button>
     </div>
 </div>
